@@ -1,10 +1,10 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import HomePage from '../views/HomePage.vue'
-import AddPost from "../views/AddPost.vue"
-import APost from "../views/APost.vue"
-import LogIn from "../views/LogIn.vue"
-import SignUp from "../views/SignUp.vue"
-import auth from "../auth.js"
+import HomePage from '../views/HomePage.vue';
+import AddPost from "../views/AddPost.vue";
+import APost from "../views/APost.vue";
+import LogIn from "../views/LogIn.vue";
+import SignUp from "../views/SignUp.vue";
+import auth from "../auth.js";
 
 const routes = [
   {

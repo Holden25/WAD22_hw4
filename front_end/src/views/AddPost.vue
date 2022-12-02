@@ -1,35 +1,37 @@
 <template>
     <div class="form">
       <h3>Add a Post</h3>
-      <label for="title">Title: </label>
-      <input name="title" type="text" id="title" required v-model="post.title" />
       <label for="body">Body: </label>
       <input name="body" type="text" id="body" required v-model="post.body" />
-      <label for="urllink">Url: </label>
-      <input name="urllink"  type="text" id="urllink" required v-model="post.urllink"/>
       <button @click="addPost" class="addPost">Add Post</button>
     </div>
   </template>
   
   <script>
+  import auth from "../auth.js"
   export default {
     name: "AddPost",
     data() {
       return {
         post: {
-          title: "",
           body: "",
-          urllink: "",
         },
       };
     },
     methods: {
-      addPost() {
+      async addPost() {
+        let currentDate = new Date().toJSON().slice(0, 10);
         var data = {
-          title: this.post.title,
+          //title: this.post.title,
           body: this.post.body,
-          urllink: this.post.urllink,
+          date: currentDate,
+          //urllink: this.post.urllink,
         };
+        let authResult = await auth.authenticated();
+
+        //check if user has valid token
+        if(authResult){
+
         // using Fetch - post method - send an HTTP post request to the specified URI with the defined body
         fetch("http://localhost:3000/api/posts", {
           method: "POST",
@@ -47,6 +49,13 @@
           console.log(e);
           console.log("error");
         });
+
+        //if user dosent have valid token route to login page
+        }else{
+          console.log("user not authenticated")
+          this.$router.push("/login")
+        }
+
       },
     },
   };

@@ -19,9 +19,8 @@
         <div class="item" v-for="post in posts" :key="post.id">
           <!-- / We are putting an anchor for each post, when we click on it, we will be directed to the specific post view (/apost/) /  -->
           <a class="singlepost" :href="'/api/apost/' + post.id">
-            <span class="title"> <b>Title:</b> {{ post.title }} </span><br />
+            <span class="title"> <b>Date:</b> {{ post.date }} </span><br />
             <span class="body"> <b>Body:</b> {{ post.body }} </span> <br />
-            <span class="url"> <b>Url:</b> {{ post.urllink }} </span> <br />
           </a>
         </div>
       </ul>
@@ -96,7 +95,7 @@ export default {
     },
 
     DeleteAll(){
-      fetch(`http://localhost:3000/api/posts/all`, {
+      fetch(`http://localhost:3000/api/delete`, {
         method: "DELETE",
         headers: {"Content-Type": "application/json"}
       })
@@ -106,6 +105,7 @@ export default {
       .catch((e) => {
         console.log(e);
       })
+      window.location.reload()
     }
 
 
