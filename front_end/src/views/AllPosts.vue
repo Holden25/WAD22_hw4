@@ -14,7 +14,7 @@
       <!--trying to make posts dynamically, not using compo (in the end in homework we have to use comp)-->
         <article class = "post" v-for="post in postList" :key="post.id">
           <div class = "post_header">
-                <img class = "icon" src="@/assets/me.png" alt="profiil">
+                <!-- <img class = "icon" src="../assets/me.png" alt="profiil"> -->
                 <p> {{post.date}}</p>
           </div>
 
@@ -22,7 +22,7 @@
             <img v-if="post.picture" style="max-width: 60% ;" v-bind:src="post.picture" alt="pilt">
             <span>{{post.picture}}</span>
             <p> {{post.body}}</p>
-            <img class  = "icon" src="@/assets/like_button.jpg" alt="like button">
+            <!-- <img class  = "icon" src="../assets/like_button.jpg" alt="like button"> -->
         </article>
     </main>
 
@@ -37,9 +37,9 @@
 </template>
 
 <script>
-import Footer from "@/components/Footer.vue";
-import Header from "@/components/Header.vue";
-import Post from "@/components/Post.vue";
+import Footer from "../components/Footer.vue";
+import Header from "../components/Header.vue";
+import Post from "../components/Footer.vue";
 export default {
   name: 'HomeView',
   components: {

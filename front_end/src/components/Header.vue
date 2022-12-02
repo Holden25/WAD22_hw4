@@ -4,7 +4,7 @@
             <router-link to="/">Home</router-link>
             <router-link to="/signupview">signup</router-link>
         </div>
-        <img class = "icon" id="profile_pic" src="@/assets/me.png" alt="profile picture">
+        <!--<img class = "icon" id="profile_pic" src="../assets/me.png" alt="profile picture">-->
     </nav>
 </template>
     
