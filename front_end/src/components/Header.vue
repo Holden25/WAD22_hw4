@@ -2,7 +2,7 @@
     <nav>
         <div id="navigation">
             <router-link to="/">Home</router-link>
-            <router-link to="/signupview">signup</router-link>
+            <router-link to="/about">Contacts</router-link>
         </div>
         <!--<img class = "icon" id="profile_pic" src="../assets/me.png" alt="profile picture">-->
     </nav>
