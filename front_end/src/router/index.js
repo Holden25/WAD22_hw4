@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import HomePage from '../views/HomePage.vue';
 import AddPost from "../views/AddPost.vue";
 import APost from "../views/APost.vue";
@@ -32,21 +32,31 @@ const routes = [
     name: "LogIn",
     component: LogIn,
   },
-
-  {
-    path: "/api/allposts",
-    name: "AllPosts",
-    component: HomePage,
-  },
   {
       path: "/api/apost/:id",
       name: "APost",
       component: APost,
+      beforeEnter: async(to, from, next) => {
+        let authResult = await auth.authenticated();
+        if(!authResult){
+          next("/login")
+        }else{
+          next();
+        }
+      }
   },
   {
       path: "/api/addpost",
       name: "AddPost",
       component: AddPost,
+      beforeEnter: async(to, from, next) => {
+        let authResult = await auth.authenticated();
+        if(!authResult){
+          next("/login")
+        }else{
+          next();
+        }
+      }
   },
   {
     path: '/about',
@@ -64,7 +74,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes
 })
 

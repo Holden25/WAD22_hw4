@@ -17,6 +17,7 @@
     <h1>All Posts</h1>
       <ul>
         <div class="item" v-for="post in posts" :key="post.id">
+          <!--<p>{{post.id}}</p>-->
           <!-- / We are putting an anchor for each post, when we click on it, we will be directed to the specific post view (/apost/) /  -->
           <a class="singlepost" :href="'/api/apost/' + post.id">
             <span class="title"> <b>Date:</b> {{ post.date }} </span><br />
@@ -115,6 +116,7 @@ export default {
     // call fetchPosts() when this element (Homepage) mounts 
     this.fetchPosts();
     console.log("mounted");
+    //console.log(post.id);
   }
 
 }

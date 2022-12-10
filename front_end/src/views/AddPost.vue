@@ -43,7 +43,7 @@
         .then((response) => {
           console.log(response.data);
           // redirect to /allposts view
-          this.$router.push("/api/allposts");
+          this.$router.push("/");
         })
         .catch((e) => {
           console.log(e);
