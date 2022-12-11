@@ -65,17 +65,17 @@
   .form {
     max-width: 420px;
     margin: 30px auto;
-    background: rgb(167, 154, 154);
+    background: #001524;
     text-align: left;
     padding: 40px;
     border-radius: 10px;
   }
   h3 {
     text-align: center;
-    color: rgb(8, 110, 110);
+    color: #FFECD1;
   }
   label {
-    color: rgb(8, 110, 110);
+    color: #FFECD1;
     display: inline-block;
     margin: 25px 0 15px;
     font-size: 0.8em;
@@ -89,15 +89,15 @@
     width: 100%;
     box-sizing: border-box;
     border: none;
-    border-bottom: 1px solid white;
-    color: blue;
+    border-bottom: 1px solid #FFFFFF;
+    color: #78290F;
   }
   button {
-    background: rgb(8, 110, 110);
+    background: #FF7D00;
     border: 0;
     padding: 10px 20px;
     margin-top: 20px;
-    color: white;
+    color: #FFFFFF;
     border-radius: 20px;
     align-items: center;
     text-align: center;

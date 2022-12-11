@@ -12,8 +12,7 @@
 div {
     padding: 2em;
     border-radius: 5px;
-    /*color: red;- */
-    background-color: darkgray;
+    background-color: #001524;
     /* position: sticky; 
     bottom: 0; */
     margin-top: auto;

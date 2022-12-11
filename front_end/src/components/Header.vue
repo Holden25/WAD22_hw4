@@ -1,8 +1,8 @@
 <template>
     <nav>
         <div id="navigation">
-            <router-link to="/">Home</router-link>
-            <router-link to="/about">Contacts</router-link>
+            <router-link to="/" id="home">Home</router-link>
+            <router-link to="/about" id="contact">Contacts</router-link>
         </div>
         <!--<img class = "icon" id="profile_pic" src="../assets/me.png" alt="profile picture">-->
     </nav>
@@ -14,13 +14,19 @@
     }
 </script>
 
-<style>
+<style scoped>
 nav {
     width: 100%;
     /* flex settings*/
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+#home {
+    color: #FF7D00;
+}
+#contact {
+    color: #FFECD1;
 }
 .icon {
     border-radius: 50%;
@@ -36,9 +42,8 @@ a {
     padding-top: .5em;
     padding-bottom: .5em;
     padding-left: .5em;
-    background-color: #b6b3b3;
+    background-color: #001524;
     position: sticky;
-    width: 100%;
     top: 0;
     border-radius: 5px;
 }

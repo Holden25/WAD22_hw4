@@ -1,13 +1,13 @@
 <template>
     <div class="form">
-      <h3>LogIn</h3>
+      <h3>Login</h3>
       <label for="email">Email</label>
       <input type="email" name="email"  required v-model="email">
       <label for="password">Password</label>
       <input type="password" name="password" required v-model="password">
       <div class="container">
-        <button @click="LogIn"  class="center">LogIn</button>
-        <button @click='this.$router.push("/signup")' class="center">Signup</button>
+        <button @click="LogIn"  class="center">Log in</button>
+        <button @click='this.$router.push("/signup")' class="center">Sign up</button>
       </div>
     </div>
   </template>
@@ -59,17 +59,17 @@
   .form {
     max-width: 420px;
     margin: 30px auto;
-    background: rgb(167, 154, 154);
+    background: #001524;
     text-align: left;
     padding: 40px;
     border-radius: 10px;
   }
   h3 {
     text-align: center;
-    color: rgb(8, 110, 110);
+    color: #FFECD1;
   }
   label {
-    color: rgb(8, 110, 110);
+    color: #FFECD1;
     display: inline-block;
     margin: 25px 0 15px;
     font-size: 0.8em;
@@ -84,10 +84,10 @@
     box-sizing: border-box;
     border: none;
     border-bottom: 1px solid white;
-    color: blue;
+    color: #78290F;
   }
   button {
-    background: rgb(8, 110, 110);
+    background: #FF7D00;
     border: 0;
     padding: 10px 20px;
     margin: 20px 20px 20px 20px;

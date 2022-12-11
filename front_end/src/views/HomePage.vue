@@ -3,7 +3,7 @@
 
 <Header/>
 
-<button  @click="Logout" class="center">Logout</button>
+<button  @click="Logout" class="button" id="logout">Logout</button>
 
 <div id = "main_section">
     <aside class = "sidebar">
@@ -21,15 +21,15 @@
           <!-- / We are putting an anchor for each post, when we click on it, we will be directed to the specific post view (/apost/) /  -->
           <a class="singlepost" :href="'/api/apost/' + post.id">
             <span class="title"> <b>Date:</b> {{ post.date }} </span><br />
-            <span class="body"> <b>Body:</b> {{ post.body }} </span> <br />
+            <span class="body"> <b>Post: </b> {{ post.body }} </span> <br />
           </a>
         </div>
       </ul>
     </div>
 
 
-    <button  @click="AddPost" class="left">Add post</button>
-    <button  @click="DeleteAll" class="right">Delete all</button>
+    <button  @click="AddPost" class="button">Add post</button>
+    <button  @click="DeleteAll" class="button">Delete all</button>
 
 
 
@@ -144,7 +144,7 @@ export default {
 nav {
     width: 100%;
     border-radius: 5px;
-    background-color: darkgray;
+    background-color: #001524;
     /* flex settings*/
     display: flex;
     flex-direction: row;
@@ -152,7 +152,7 @@ nav {
 }
 .sidebar {
     border-radius: 5px;
-    background-color: darkgrey;
+    background-color: #001524;
     flex: 1;
 }
 .icon {
@@ -162,7 +162,7 @@ nav {
     margin: 0.2em 0.2em;
 }
 main article {
-    border: 0.2em solid black;
+    border: 0.2em solid #001524;
     border-radius: 5px;
     margin: 0.5em 0.1em;
 }
@@ -175,12 +175,30 @@ main article {
 main {
     padding: 3%;
     margin: 0em 1em;
-    background: darkgray;
+    background: #001524;
     border-radius: 5px;
     flex: 3;
     overflow: auto;
     height: 80vh;
 }
+
+h1 {
+    color: #FFECD1;
+}
+
+.button {
+    background-color: #FF7D00;
+    color: #FFFFFF;
+    border: #FF7D00;
+    border-radius: 5%;
+    height: 30px;
+    margin: 5px;
+}
+
+#logout {
+    border-radius: 0.3em;
+}
+
 div + img{
     margin: auto;
     display: block;
