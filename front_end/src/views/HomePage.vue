@@ -15,16 +15,16 @@
 
     <div id="post-list">
     <h1>All Posts</h1>
-      <ul>
+      <!--ul-->
         <div class="item" v-for="post in posts" :key="post.id">
           <!--<p>{{post.id}}</p>-->
           <!-- / We are putting an anchor for each post, when we click on it, we will be directed to the specific post view (/apost/) /  -->
           <a class="singlepost" :href="'/api/apost/' + post.id">
-            <span class="title"> <b>Date:</b> {{ post.date }} </span><br />
-            <span class="body"> <b>Post: </b> {{ post.body }} </span> <br />
+            <div class="title"> <b>Date:</b> {{ post.date }} </div><!--br /-->
+            <div class="body"> <b>Post: </b> {{ post.body }} </div> <!--br /-->
           </a>
         </div>
-      </ul>
+      <!--/ul-->
     </div>
 
 
@@ -171,6 +171,27 @@ main article {
     justify-content: space-between;
     margin: 0.5em 0.5em;
     min-height: fit-content;
+}
+.item {
+    background-color: #FF7D00;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.singlepost {
+    text-decoration: none;
+    color: white;
+}
+.title {
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 30px;
+    text-align: right;
+}
+.body {
+    padding-left: 10px;
+    padding-bottom: 15px;
+    text-align: left;
 }
 main {
     padding: 3%;
